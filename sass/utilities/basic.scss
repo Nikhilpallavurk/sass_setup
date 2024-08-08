@@ -1,0 +1,41 @@
+@use '../base' as *;
+
+.no-drop {
+  cursor: no-drop;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+  @include mq(small) {
+    flex-wrap: wrap;
+  }
+}
+
+.no-gap {
+  gap: unset;
+}
+.no-row-gap {
+  row-gap: unset;
+}
+.no-col-gap {
+  column-gap: unset;
+}
+
+.no-wrap-c {
+  flex-wrap: nowrap;
+}
+
+.wt-auto {
+  width: auto;
+}
+
+.rm-trans {
+  transition: unset;
+}
+
+.ul {
+  text-decoration: underline;
+}
+
+.rm-shadow {
+  box-shadow: unset;
+}

@@ -1,0 +1,118 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+:root {
+  @each $scale, $value in $border-width {
+    --bw-#{$scale}: #{$value};
+  }
+
+  @each $scale, $value in $border-radius {
+    --br-#{$scale}: #{$value};
+  }
+
+  @each $scale, $value in $padding {
+    --padding-#{$scale}: #{$value};
+  }
+
+  @each $scale, $value in $margin {
+    --margin-#{$scale}: #{$value};
+  }
+
+  @each $scale, $value in $gap {
+    --gap-#{$scale}: #{$value};
+  }
+
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $scree-size, $font-size in $font-size-scale {
+    @if $scree-size == large {
+      @each $size, $value in $font-size {
+        ---fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq(small) {
+        @each $size, $value in $font-size {
+          ---fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+
+  --main-padding-hl: 8.5rem;
+  --main-padding-vl: 1rem;
+
+  @include mq(medium) {
+    --main-padding-hl: 4rem;
+    --main-padding-vl: 0.7rem;
+  }
+
+  @include mq(small) {
+    --main-padding-hl: 2.5rem;
+    --main-padding-vl: 0.5rem;
+  }
+
+  --border-width: 0.1rem;
+  --active-color: var(--clr-primary-200);
+
+  ---comp-height: clamp(2.8rem, (3vw + 0.5rem), 3rem);
+  @include mq(medium) {
+    ---comp-height: clamp(2.5rem, (2.6vw + 0.4rem), 2.75rem);
+  }
+  @include mq(small) {
+    ---comp-height: clamp(2.2rem, (2.3vw + 0.3rem), 2.35rem);
+  }
+
+  --box-shadow: 2px 2px 6px var(--clr-w-grace-500),
+    -2px -2px 6px var(--clr-w-grace-600);
+
+  --img-filter: invert(48%) sepia(13%) saturate(1000) hue-rotate(353deg)
+    brightness(100%) contrast(100%);
+
+  --input-height: var(---comp-height);
+  --button-height: var(---comp-height);
+
+  ---mandatory-text-height: clamp(1.2rem, (2vw + 0.6rem), 1.6rem);
+  --border-1: var(--border-width) solid var(--clr-primary-100);
+  --inactive-border: var(--border-width) solid var(--clr-w-grace-400);
+  --hover-border: var(--border-width) solid var(--clr-primary-100);
+  --input-font-size: clamp(0.8rem, 2vw, 1rem);
+
+  ---item-card-height: clamp(16rem, (20vw + 1rem), 18rem);
+  ---item-card-width: clamp(10rem, (12vw + 1rem), 12rem);
+
+  ---product-card-height: clamp(10rem, (10vw + 1rem), 12rem);
+  ---product-card-width: clamp(10rem, (10vw + 1rem), 12rem);
+
+  ---item-full-image-height: clamp(75vh, 40vw + 1rem, 80vh);
+  ---item-full-image-width: clamp(20rem, 20vw + 1rem, 25rem);
+
+  ---share-image-width: clamp(6rem, (6vw + 1rem), 7rem);
+  @include mq(medium) {
+    ---item-card-height: clamp(13rem, 17vw + 1rem, 15rem);
+    ---item-card-width: clamp(9rem, 8vw + 1rem, 11rem);
+
+    ---product-card-height: clamp(7rem, 7vw + 1rem, 9rem);
+    ---product-card-width: clamp(7rem, 7vw + 1rem, 9rem);
+
+    ---item-full-image-height: clamp(40vh, 30vw + 1rem, 45vh);
+    ---item-full-image-width: 100%;
+
+    ---share-image-width: clamp(4rem, (4vw + 1rem), 5rem);
+  }
+  @include mq(small) {
+    ---item-card-height: clamp(9rem, 12vw + 1rem, 11rem);
+    ---item-card-width: clamp(7rem, 6vw + 1rem, 9rem);
+
+    ---product-card-height: clamp(5.5rem, 6vw + 1rem, 7rem);
+    ---product-card-width: clamp(5.5rem, 6vw + 1rem, 7rem);
+
+    ---item-full-image-height: clamp(35vh, 25vw + 1rem, 40vh);
+    ---item-full-image-width: 100%;
+
+    ---share-image-width: clamp(2.5rem, (2.5vw + 0.6rem), 3rem);
+  }
+}

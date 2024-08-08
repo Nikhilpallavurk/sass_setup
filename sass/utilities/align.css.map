@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,WAAW,EAAE,qBAAqB;CACnC;;AAED,AAAA,UAAU,CAAC;EACT,WAAW,EAAE,iBAAiB;CAC/B",
+    "sources": [
+        "align.scss"
+    ],
+    "names": [],
+    "file": "align.css"
+}

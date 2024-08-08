@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+@each $scale in $font-weight {
+  .font-wt-#{$scale} {
+    font-weight: #{$scale} !important;
+  }
+}
+
+@each $scale, $value in $gap {
+  .row-gap-#{$scale} {
+    row-gap: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $gap {
+  .col-gap-#{$scale} {
+    column-gap: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $width-percentage {
+  .gb-wp-#{$scale} {
+    width: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $margin {
+  .mr-top-#{$scale} {
+    margin-top: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $margin {
+  .mr-bottom-#{$scale} {
+    margin-bottom: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $margin {
+  .mr-left-#{$scale} {
+    margin-left: #{$value} !important;
+  }
+}
+
+@each $scale, $value in $margin {
+  .mr-right-#{$scale} {
+    margin-right: #{$value} !important;
+  }
+}
+
+// @each $color, $shades in $colors {
+//   @each $shade, $value in $shades {
+//     .text-clr-#{$color}-#{$shade} {
+//       color: #{$value};
+//     }
+//   }
+// }
+
+// @each $color, $shades in $colors {
+//   @each $shade, $value in $shades {
+//     .bg-clr-#{$color}-#{$shade} {
+//       background-color: #{$value};
+//     }
+//   }
+// }
