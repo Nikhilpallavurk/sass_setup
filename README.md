@@ -1,21 +1,17 @@
-```markdown
 # SASS Integration Example
 
 This project demonstrates how to integrate SASS (SCSS) with an HTML file. The SASS code is compiled into CSS, which is then linked to the HTML file.
 
 ## Project Structure
-```
 
 .
 ├── index.html
-├── styles.scss
+├── sass/index.scss
 └── styles.css (generated)
 
-````
-
 - `index.html`: The main HTML file that includes the compiled CSS.
-- `styles.scss`: The SASS/SCSS file where styles are written.
-- `styles.css`: The compiled CSS file generated from `styles.scss`.
+- `index.scss`: The SASS/SCSS file where styles are written.
+- `styles.css`: The compiled CSS file generated from `index.scss`.
 
 ## Prerequisites
 
@@ -31,7 +27,7 @@ Before you begin, ensure you have the following installed on your system:
 ```bash
 git clone <repository-url>
 cd <repository-directory>
-````
+```
 
 ### 2. Install SASS
 
@@ -43,7 +39,7 @@ npm install -g sass
 
 ### 3. Compile SASS to CSS
 
-Compile the `styles.scss` file to `styles.css` using the following command:
+Compile the `sass/index.scss` file to `styles.css` using the following command:
 
 ```bash
 sass sass/index.scss styles.css
@@ -64,10 +60,10 @@ open index.html
 If you’re actively working on the SASS file, you can use SASS to watch for changes and automatically compile to CSS:
 
 ```bash
-sass --watch styles.scss:styles.css
+sass --watch sass/index.scss:styles.css
 ```
 
-This command will watch the `styles.scss` file and update `styles.css` whenever you save changes.
+This command will watch the `sass/index.scss` file and update `styles.css` whenever you save changes.
 
 ## Additional Resources
 
@@ -90,4 +86,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **License**: A placeholder for licensing information.
 
 You can customize the sections, particularly the repository URL in the "Clone the Repository" step, according to your project's specifics.
+
 ```
